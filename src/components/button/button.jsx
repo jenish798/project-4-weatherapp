@@ -3,7 +3,7 @@ import React from "react"
 const ButtonComp = ({name}) =>{
     return(
         <>
-        <button name={name}>{name}</button>
+        <button>{name}</button>
         </>
     )
 }

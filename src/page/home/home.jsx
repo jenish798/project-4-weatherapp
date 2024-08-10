@@ -7,7 +7,8 @@ const Home = ({placholdercity}) =>{
     const {find} = string
     return(
         <>
-        <InputComp placeholder={placholdercity}/>
+        <InputComp 
+        placeholder={placholdercity}/>
         <ButtonComp name={find}/>
         </>
     )

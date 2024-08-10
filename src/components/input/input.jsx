@@ -4,7 +4,6 @@ const InputComp = ({placholder}) =>{
         <>
         <input
         type='text'
-        // value={value}
         placeholder={placholder}
         />
         </>
