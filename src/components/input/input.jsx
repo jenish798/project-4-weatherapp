@@ -1,10 +1,12 @@
 
-const InputComp = ({placholder}) =>{
+const InputComp = ({onChange,value}) =>{
     return(
         <>
         <input
-        type='text'
-        placeholder={placholder}
+       type="text"
+       placeholder="Enter city name"
+       value={value}
+       onChange={onChange}
         />
         </>
     )

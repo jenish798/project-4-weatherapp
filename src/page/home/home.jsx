@@ -1,17 +1,21 @@
-import React from "react"
-import InputComp from "../../components/input/input"
-import ButtonComp from "../../components/button/button"
-import string from "../../utils"
 
-const Home = ({placholdercity}) =>{
-    const {find} = string
-    return(
-        <>
-        <InputComp 
-        placeholder={placholdercity}/>
-        <ButtonComp name={find}/>
-        </>
-    )
-}
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Weather from '../weather_comp/weather';
 
-export default Home
+const WeatherApp = () => {
+  const [city, setCity] = useState('');
+  const dispatch = useDispatch();
+
+  const handleFetchWeather = () => {
+    dispatch(fetchWeather(city));
+  };
+
+  return (
+    <div>
+     <Weather/>
+    </div>
+  );
+};
+
+export default WeatherApp;

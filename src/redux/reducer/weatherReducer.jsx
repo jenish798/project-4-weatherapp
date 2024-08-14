@@ -1,5 +1,4 @@
 
-
 const initialState = {
   weatherData:null,
   loading:false,
