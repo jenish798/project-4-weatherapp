@@ -13,8 +13,8 @@ const Weather = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(city){
-    dispatch (fetchWeatherData(city));
+    if (city) {
+      dispatch(fetchWeatherData(city));
     }
   };
 
@@ -25,12 +25,7 @@ const Weather = () => {
           value={city}
           onChange={(event) => setCity(event.target.value)}
         />
-        <ButtonComp 
-          onClick={() => {}}
-          disabled={loading}
-          loading={loading}
-        />
-
+        <ButtonComp onClick={() => {}} disabled={loading} loading={loading} />
       </form>
       {error && <p>Error: {error}</p>}
       {weatherData && !loading && (
@@ -45,5 +40,3 @@ const Weather = () => {
 };
 
 export default Weather;
-
-
