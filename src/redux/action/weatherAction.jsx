@@ -23,7 +23,6 @@ export const fetchWeatherData = (city) => {
     dispatch(fetchWeatherRequest());
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fbc4b181ae0e505b810c83328d502a3b`
       );
       dispatch(fetchWeatherSuccess(response.data));
     } catch (error) {
