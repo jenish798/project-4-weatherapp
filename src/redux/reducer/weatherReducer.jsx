@@ -1,3 +1,4 @@
+import { FETCH_WEATHER_REQUEST,FETCH_WEATHER_SUCCESS,FETCH_WEATHER_FAILURE } from "../action_type/action_type_request";
 
 const initialState = {
   weatherData:null,
@@ -7,19 +8,19 @@ const initialState = {
 
 const weatherReducer = (state=initialState,action)=>{
   switch(action.type){
-    case 'fetch_weather_request':
+    case  FETCH_WEATHER_REQUEST:
       return{
         ...state,
         loading:true,
         error:null
       };
-      case'fetch_weather_success':
+      case FETCH_WEATHER_SUCCESS:
       return{
         ...state,
         loading:false,
         weatherData: action.payload,
       };
-      case 'fetch_weather_failure':
+      case FETCH_WEATHER_FAILURE:
         return{
           ...state,
           loading:false,

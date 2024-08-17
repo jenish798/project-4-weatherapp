@@ -12,7 +12,7 @@ const WeatherApp = () => {
   };
 
   return (
-    <div>
+    <div className='Home'>
      <Weather/>
     </div>
   );

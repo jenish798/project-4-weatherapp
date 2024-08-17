@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchWeatherData } from "../../redux/action/weatherAction";
+import { fetchWeatherData } from "../../API/endpoints";
 import InputComp from "../../components/input/input";
 import ButtonComp from "../../components/button/button";
 
@@ -19,8 +19,8 @@ const Weather = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='home-1'>
+      <form className="inpt_btn" onSubmit={handleSubmit}>
         <InputComp
           value={city}
           onChange={(event) => setCity(event.target.value)}
