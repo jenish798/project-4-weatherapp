@@ -15,3 +15,15 @@ export const fetchWeatherFailure = (error) =>({
   payload:error,
 })
 
+// export const fetchWeatherData = (city) => {
+//   return async (dispatch) => {
+//     dispatch(fetchWeatherRequest());
+//     try {
+//       const response = await axios.get(
+//       );
+//       dispatch(fetchWeatherSuccess(response.data));
+//     } catch (error) {
+//       dispatch(fetchWeatherFailure(error.message));
+//     }
+//   };
+// };

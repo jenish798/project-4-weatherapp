@@ -9,7 +9,7 @@ export const fetchWeatherData = (city) => {
       dispatch(fetchWeatherRequest());
       try {
         const response = await axios.get(
-          `${BASE_URL}?q=${city}&${API_KEY}`
+        `${BASE_URL}?q=${city}&appid=${API_KEY}`
         );
         dispatch(fetchWeatherSuccess(response.data));
       } catch (error) {
