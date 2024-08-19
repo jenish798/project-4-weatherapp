@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchWeatherData } from "../../API/endpoints";
+import { fetchWeatherData } from "../../thunk/thunk";
 import InputComp from "../../components/input/input";
 import ButtonComp from "../../components/button/button";
 
