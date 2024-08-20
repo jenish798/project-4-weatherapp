@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherData } from "../../thunk/thunk";
 import InputComp from "../../components/input/input";
 import ButtonComp from "../../components/button/button";
+import Getaction from "../../API/postaction/getaction";
 
 const Weather = () => {
   const [city, setCity] = useState("");
@@ -19,7 +20,7 @@ const Weather = () => {
   };
 
   return (
-    <div className='home-1'>
+    <div>
       <form className="inpt_btn" onSubmit={handleSubmit}>
         <InputComp
           value={city}
@@ -27,14 +28,12 @@ const Weather = () => {
         />
         <ButtonComp onClick={() => {}} disabled={loading} loading={loading} />
       </form>
-      {error && <p>Error: {error}</p>}
-      {weatherData && !loading && (
-        <div>
-          <h2>{weatherData.name}</h2>
-          <p>{weatherData.weather[0].description}</p>
-          <p>Temperature: {weatherData.main.temp}</p>
-        </div>
-      )}
+      <Getaction
+        city={city}
+        weatherData={weatherData}
+        loading={loading}
+        error={error}
+      />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { fetchWeatherDataFromAPI } from '../service/weatherservice';
+import { fetchWeatherDataFromAPI } from '../API/endpoints/endpoints';
 import { fetchWeatherRequest, fetchWeatherSuccess, fetchWeatherFailure } from '../redux/action/weatherAction';
 
 export const fetchWeatherData = (city) => {
