@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherData } from "../../thunk/thunk";
 import InputComp from "../../components/input/input";
 import ButtonComp from "../../components/button/button";
-import Getaction from "../../API/postaction/getaction";
+import Getaction from "../../API/getaction/getaction";
 
 const Weather = () => {
   const [city, setCity] = useState("");
