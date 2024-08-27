@@ -18,6 +18,11 @@ export default [
       },
     },
     settings: { react: { version: '18.3' } },
+    env: {
+      browser: true,
+      node: true,  
+      es2021: true, 
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,

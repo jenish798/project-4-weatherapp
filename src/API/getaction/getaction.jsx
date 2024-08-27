@@ -1,20 +1,14 @@
-import React from 'react';
-import InputComp from '../../components/input/input';
-import ButtonComp from '../../components/button/button';
+import axios from 'axios';
 
-const Getaction = ({ city, weatherData, loading, error }) => {
-  return (
-    <div className='home-1'>
-      {error && <p>Error: {error}</p>}
-      {weatherData && !loading && (
-        <div>
-          <h2>{weatherData.name}</h2>
-          <p>{weatherData.weather[0].description}</p>
-          <p>Temperature: {weatherData.main.temp}</p>
-        </div>
-      )}
-    </div>
-  );
+export const fetchWeatherDataFromAPI = async (city) => {
+
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+  try {
+    const response = await axios.get(`${apiUrl}?q=${city}&appid=${apiKey}`);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
 };
-
-export default Getaction;

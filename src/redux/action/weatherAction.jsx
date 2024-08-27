@@ -1,4 +1,4 @@
-import { FETCH_WEATHER_FAILURE,FETCH_WEATHER_REQUEST,FETCH_WEATHER_SUCCESS } from '../action_type/action_type_request';
+import { FETCH_WEATHER_FAILURE,FETCH_WEATHER_REQUEST,FETCH_WEATHER_SUCCESS } from '../actiontype/actiontyperequest';
 
 
 export const fetchWeatherRequest = () =>({

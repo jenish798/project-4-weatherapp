@@ -1,4 +1,4 @@
-import { FETCH_WEATHER_REQUEST,FETCH_WEATHER_SUCCESS,FETCH_WEATHER_FAILURE } from "../action_type/action_type_request";
+import { FETCH_WEATHER_REQUEST,FETCH_WEATHER_SUCCESS,FETCH_WEATHER_FAILURE } from "../actiontype/actiontyperequest";
 
 const initialState = {
   weatherData:null,

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Weather from '../weather_comp/weather';
+import Weather from '../weathercomp/weather';
 
 const WeatherApp = () => {
   const [city, setCity] = useState('');
